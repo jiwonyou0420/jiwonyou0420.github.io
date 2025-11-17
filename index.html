@@ -65,24 +65,41 @@
                       <tr>
                         <!-- Media -->
                         <td style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
-                          <!-- Multi-view gifs of teacher policy -->
-                          <img src="images/birdeye.gif"
-                              alt="UR3 teacher policy – bird’s-eye view"
-                              style="width:32%;border-radius:8px;display:inline-block;margin-right:2%;">
-                          <img src="images/side.gif"
-                              alt="UR3 teacher policy – side view"
-                              style="width:32%;border-radius:8px;display:inline-block;margin-right:2%;">
-                          <img src="images/wrist.gif"
-                              alt="UR3 teacher policy – wrist RGB view"
-                              style="width:32%;border-radius:8px;display:inline-block;">
 
-                          <br><br>
-                          <!-- Links to videos -->
-                          <p style="font-size:small;margin:0;">
-                            <a href="videos/ur-rl.mp4">▶ RL policy in simulation</a> &nbsp;/&nbsp;
-                            <a href="videos/ur-real.mp4">▶ Deployed on real UR3</a>
-                          </p>
+                          <!-- Row 1: three gifs -->
+                          <div style="display:flex;justify-content:center;gap:4px;margin-bottom:10px;">
+                            <img src="images/birdeye.gif"
+                                alt="UR3 teacher policy – bird’s-eye view"
+                                style="width:32%;border-radius:8px;">
+                            <img src="images/side.gif"
+                                alt="UR3 teacher policy – side view"
+                                style="width:32%;border-radius:8px;">
+                            <img src="images/wrist.gif"
+                                alt="UR3 teacher policy – wrist RGB view"
+                                style="width:32%;border-radius:8px;">
+                          </div>
+
+                          <!-- Row 2: videos stacked -->
+                          <div style="display:block;">
+                            <video src="videos/ur-rl.mp4"
+                                  autoplay loop muted playsinline
+                                  style="width:100%;border-radius:8px;margin-bottom:8px;">
+                              Your browser does not support the video tag.
+                            </video>
+                            <video src="videos/ur-real.mp4"
+                                  autoplay loop muted playsinline
+                                  style="width:100%;border-radius:8px;">
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
+
+                          <!-- Links under everything -->
+                          <!-- <p style="font-size:small;margin-top:8px;">
+                            <a href="videos/ur-rl.mp4" target="_blank" rel="noopener noreferrer">▶ RL policy in simulation</a> &nbsp;/&nbsp;
+                            <a href="videos/ur-real.mp4" target="_blank" rel="noopener noreferrer">▶ Deployed on real UR3</a>
+                          </p> -->
                         </td>
+
 
                         <!-- Text -->
                         <td style="padding:10px;width:60%;vertical-align:middle">
@@ -111,33 +128,35 @@
                   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
                     <tbody>
                       <tr>
-                        <!-- Media: three videos side by side -->
+                        <!-- Media: three videos stacked vertically -->
                         <td style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
-                          <div style="display:flex;gap:6px;justify-content:center;">
+                          <div style="display:block;">
                             <video src="videos/pickup-demo.mp4"
                                   autoplay loop muted playsinline
-                                  style="width:32%;border-radius:8px;">
+                                  style="width:100%;border-radius:8px;margin-bottom:8px;">
                               Your browser does not support the video tag.
                             </video>
                             <video src="videos/grasping-bowl-video.mp4"
                                   autoplay loop muted playsinline
-                                  style="width:32%;border-radius:8px;">
+                                  style="width:100%;border-radius:8px;margin-bottom:8px;">
                               Your browser does not support the video tag.
                             </video>
                             <video src="videos/vision-detection.mp4"
                                   autoplay loop muted playsinline
-                                  style="width:32%;border-radius:8px;">
+                                  style="width:100%;border-radius:8px;">
                               Your browser does not support the video tag.
                             </video>
                           </div>
-                          <p style="font-size:small;margin-top:8px;">
+
+                          <!-- <p style="font-size:small;margin-top:8px;">
                             Pickup demo &nbsp;/&nbsp; Grasping bowl &nbsp;/&nbsp; Vision detection
                             <br>
                             <a href="videos/pickup-demo.mp4" target="_blank" rel="noopener noreferrer">open pickup</a> &nbsp;·&nbsp;
                             <a href="videos/grasping-bowl-video.mp4" target="_blank" rel="noopener noreferrer">open bowl</a> &nbsp;·&nbsp;
                             <a href="videos/vision-detection.mp4" target="_blank" rel="noopener noreferrer">open vision</a>
-                          </p>
+                          </p> -->
                         </td>
+
 
                         <!-- Text -->
                         <td style="padding:10px;width:60%;vertical-align:middle">
