@@ -111,16 +111,31 @@
                   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
                     <tbody>
                       <tr>
-                        <!-- Media -->
+                        <!-- Media: three videos side by side -->
                         <td style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
-                          <!-- One main embedded video, others as links -->
-                          <video src="videos/pickup-demo.mp4"
-                                autoplay loop muted playsinline
-                                style="width:100%;border-radius:8px;">
-                          </video>
+                          <div style="display:flex;gap:6px;justify-content:center;">
+                            <video src="videos/pickup-demo.mp4"
+                                  autoplay loop muted playsinline
+                                  style="width:32%;border-radius:8px;">
+                              Your browser does not support the video tag.
+                            </video>
+                            <video src="videos/grasping-bowl-video.mp4"
+                                  autoplay loop muted playsinline
+                                  style="width:32%;border-radius:8px;">
+                              Your browser does not support the video tag.
+                            </video>
+                            <video src="videos/vision-detection.mp4"
+                                  autoplay loop muted playsinline
+                                  style="width:32%;border-radius:8px;">
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
                           <p style="font-size:small;margin-top:8px;">
-                            <a href="videos/grasping-bowl-video.mp4">▶ Grasping a bowl</a> &nbsp;/&nbsp;
-                            <a href="videos/vision-detection.mp4">▶ Vision detection &amp; pose estimation</a>
+                            Pickup demo &nbsp;/&nbsp; Grasping bowl &nbsp;/&nbsp; Vision detection
+                            <br>
+                            <a href="videos/pickup-demo.mp4" target="_blank" rel="noopener noreferrer">open pickup</a> &nbsp;·&nbsp;
+                            <a href="videos/grasping-bowl-video.mp4" target="_blank" rel="noopener noreferrer">open bowl</a> &nbsp;·&nbsp;
+                            <a href="videos/vision-detection.mp4" target="_blank" rel="noopener noreferrer">open vision</a>
                           </p>
                         </td>
 
@@ -144,6 +159,7 @@
                   </table>
                 </td>
               </tr>
+
 
               <!-- Project 3: Zurich Robotics Hackathon -->
               <tr>
