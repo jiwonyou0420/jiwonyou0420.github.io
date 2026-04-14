@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -23,13 +23,11 @@
                   Jiwon You
                 </p>
                 <p style="text-align: center;"> jiwon.you at epfl dot ch</p>
-                <p style="text-align: justify;">I'm currently a master student at EPFL, Mechanical Engineering and Data Science. I've been supervised by prof. Josie Hughes and Maryam Kamgarpour on manipulation RL. I've also participted in robotics competitions and hackathon.
-                </p>
-                <p style="text-align: justify;">
-                  I received my B.S. degree in Mechanical Engineering at <a href="https://www.snu.ac.kr/">Seoul National University</a>(Summa Cum Laude graduation). During my exchange at <a href="https://www.ethz.ch/">ETH Zurich</a>, I interned at <a href="https://asl.ethz.ch/v4rl.html">Vision for Robotics Lab</a> led by <a href="https://mavt.ethz.ch/people/person-detail.chli.html">Professor Margarita Chli</a>. I also interned at <a href="https://www.inrol.snu.ac.kr/">Interactive & Networked Robotics Lab</a> at SNU led by <a href="https://www.inrol.snu.ac.kr/dongjun-lee">Professor Dongjun Lee</a>.
-                </p>
+                <p style="text-align: justify;">I am a master's student in Mechanical Engineering and Data Science at EPFL and a robotics intern at <a href="https://sipbb.ch/">Switzerland Innovation Park Biel/Bienne</a>, where I work on industrial robot manipulation for battery disassembly.</p>
+                <p style="text-align: justify;">My focus is learning-based manipulation, especially sim-to-real transfer, contact-rich skills, and building robot learning systems that remain robust on real hardware.</p>
+                <p style="text-align: justify;">I previously worked on manipulation and robot learning at EPFL, including with Prof. Josie Hughes at the <a href="https://www.epfl.ch/labs/create/">CREATE Lab</a>, studied robotics during an exchange at ETH Zurich, and received my B.S. in Mechanical Engineering from <a href="https://www.snu.ac.kr/">Seoul National University</a>, where I also worked on robotics research.</p>
                 <p style="text-align:center">
-                  <a href="data/Jiwon_You_CV.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="data/jiwon_you_flexion_resume.pdf">CV</a> &nbsp;/&nbsp;
                   <a href="https://www.linkedin.com/in/jiwon-you-110a33260/">LinkedIn</a> &nbsp;/&nbsp;
                   <a href="https://github.com/jiwonyou0420/">Github</a>
                 </p>
@@ -44,7 +42,9 @@
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
                 <p style="text-align: justify;">
-                  I'm interested in dexterous manipulation and sim2real transfer.</p>
+                  My work sits between robot learning and robot systems. I have built end-to-end manipulation pipelines spanning simulation design, reinforcement learning, demonstration collection, policy distillation, deployment software, and real-robot evaluation.</p>
+                <p style="text-align: justify;">
+                  Recently, I have focused on sim-to-real manipulation in IsaacLab, vision-based policy learning, and contact-rich industrial skills such as screw engagement and battery disassembly. I am especially interested in methods that improve robustness without unnecessary complexity: better task design, clearer learning pipelines, and stronger transfer from simulation to hardware.</p>
               </td>
             </tr>
           </tbody></table>
@@ -65,56 +65,24 @@
                       <tr>
                         <!-- Media -->
                         <td style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
-
-                          <!-- Row 1: three gifs -->
-                          <div style="display:flex;justify-content:center;gap:4px;margin-bottom:10px;">
-                            <img src="images/birdeye.gif"
-                                alt="UR3 teacher policy – bird’s-eye view"
-                                style="width:32%;border-radius:8px;">
-                            <img src="images/side.gif"
-                                alt="UR3 teacher policy – side view"
-                                style="width:32%;border-radius:8px;">
-                            <img src="images/wrist.gif"
-                                alt="UR3 teacher policy – wrist RGB view"
-                                style="width:32%;border-radius:8px;">
-                          </div>
-
-                          <!-- Row 2: videos stacked -->
                           <div style="display:block;">
-                            <video src="videos/ur-rl.mp4"
-                                  autoplay loop muted playsinline controls
-                                  style="width:100%;border-radius:8px;margin-bottom:8px;">
-                              Your browser does not support the video tag.
-                            </video>
-                            <video src="videos/ur-real.mp4"
+                            <img src="images/triple_008.gif"
+                                alt="Real robot cube pickup from top, side, and wrist views"
+                                style="width:100%;border-radius:8px;margin-bottom:8px;">
+                            <video src="videos/training_end_slow.mp4"
                                   autoplay loop muted playsinline controls
                                   style="width:100%;border-radius:8px;">
                               Your browser does not support the video tag.
                             </video>
                           </div>
-
-                          <!-- Links under everything -->
-                          <!-- <p style="font-size:small;margin-top:8px;">
-                            <a href="videos/ur-rl.mp4" target="_blank" rel="noopener noreferrer">▶ RL policy in simulation</a> &nbsp;/&nbsp;
-                            <a href="videos/ur-real.mp4" target="_blank" rel="noopener noreferrer">▶ Deployed on real UR3</a>
-                          </p> -->
                         </td>
-
 
                         <!-- Text -->
                         <td style="padding:10px;width:60%;vertical-align:middle">
                           <h3>Sim-to-Real Manipulation with UR3 + UMI</h3>
-                          <p style="text-align: justify;">
-                            End-to-end sim-to-real pipeline for a UR3 arm with a compliant UMI gripper in IsaacLab.
-                            I designed the simulation scene, trained a privileged state-based RL <em>teacher</em> policy
-                            on a cube-lifting task, and distilled it into a vision-based <em>student</em> using multi-view image
-                            demonstrations and visual texture randomization.
-                          </p>
-                          <p style="text-align: justify;">
-                            On the hardware side, I implemented real-time deployment on the physical UR3–UMI system
-                            (ServoJ control via <code>ur_rtde</code> and Dynamixel gripper control), enabling the same policy
-                            to run both in simulation and on the real robot, and working on reducing the remaining sim-to-real gap.
-                          </p>
+                          <p style="text-align: justify;">I built an end-to-end sim-to-real manipulation pipeline for a UR3 arm with a compliant UMI gripper in IsaacLab, covering simulation design, policy training, demonstration collection, distillation, and deployment on the real robot.</p>
+                          <p style="text-align: justify;">The project trains reinforcement learning policies in simulation and distills them into a vision-based student policy using behavior cloning with visual randomization. On the hardware side, I developed the Python deployment stack for multithreaded robot control, Dynamixel communication, and camera streaming, enabling zero-shot transfer for object pickup from random targets without explicit state estimation.</p>
+                          <p style="text-align: justify;">This work led to a first-author paper, <em>Sim-to-Real Transfer for Manipulation with Zero-Shot Embodiment Augmentation via Mechanical Compliance</em>, currently under review for IROS 2026.</p>
                         </td>
                       </tr>
                     </tbody>
@@ -122,7 +90,32 @@
                 </td>
               </tr>
 
-              <!-- Project 2: EPFL RoboCup Team -->
+              <!-- Project 2: SIPBB -->
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
+                    <tbody>
+                      <tr>
+                        <td style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
+                          <video src="videos/distance_reward_only.mp4"
+                                autoplay loop muted playsinline controls
+                                style="width:100%;border-radius:8px;">
+                            Your browser does not support the video tag.
+                          </video>
+                        </td>
+
+                        <td style="padding:10px;width:60%;vertical-align:middle">
+                          <h3>Industrial Sim-to-Real Manipulation at <a href="https://sipbb.ch/">SIPBB</a></h3>
+                          <p style="text-align: justify;">At Switzerland Innovation Park Biel/Bienne, I work on industrial manipulation for automated battery disassembly, with a focus on contact-rich skills such as screw engagement and insertion-like behaviors.</p>
+                          <p style="text-align: justify;">A major part of this work is making training pipelines more robust and easier to reason about. I refine observations, rewards, and curricula for high-precision manipulation tasks, and contribute to software modularization and simulation optimization so that the overall pipeline is both faster and more transparent.</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- Project 3: EPFL RoboCup Team -->
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
                   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
@@ -151,8 +144,8 @@
                           <!-- <p style="font-size:small;margin-top:8px;">
                             Pickup demo &nbsp;/&nbsp; Grasping bowl &nbsp;/&nbsp; Vision detection
                             <br>
-                            <a href="videos/pickup-demo.mp4" target="_blank" rel="noopener noreferrer">open pickup</a> &nbsp;·&nbsp;
-                            <a href="videos/grasping-bowl-video.mp4" target="_blank" rel="noopener noreferrer">open bowl</a> &nbsp;·&nbsp;
+                            <a href="videos/pickup-demo.mp4" target="_blank" rel="noopener noreferrer">open pickup</a> &nbsp;쨌&nbsp;
+                            <a href="videos/grasping-bowl-video.mp4" target="_blank" rel="noopener noreferrer">open bowl</a> &nbsp;쨌&nbsp;
                             <a href="videos/vision-detection.mp4" target="_blank" rel="noopener noreferrer">open vision</a>
                           </p> -->
                         </td>
@@ -180,13 +173,13 @@
               </tr>
 
 
-              <!-- Project 3: Zurich Robotics Hackathon -->
+              <!-- Project 4: Zurich Robotics Hackathon -->
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
                   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
                     <tbody>
                       <tr>
-                        <!-- Media (placeholder – update src when you have the files) -->
+                        <!-- Media (placeholder ??update src when you have the files) -->
                         <td style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
                           <video src="videos/zurich-hackathon.mp4"
                                 autoplay loop muted playsinline controls
@@ -202,12 +195,12 @@
                           <h3>Zurich Robotics Hackathon &mdash; Autonomous Tic-Tac-Toe Robot</h3>
                           <p style="text-align: justify;">
                             At the Zurich Robotics Hackathon 2025, our team built an autonomous tic-tac-toe robot arm player
-                            on top of a Lerobot teleoperation / VLA stack. We trained nine cell-specific VLA policies
+                            on top of a LeRobot teleoperation and VLA stack. We trained nine cell-specific VLA policies
                             (one per board cell) from teleoperation demonstrations for reliable token placement.
                           </p>
                           <p style="text-align: justify;">
                             I was primarily responsible for the LLM components: an LLM-based gameplay module that chose moves based
-                            on the current board state, and an LLM “sports commentator” that generated live commentary, converted it to
+                            on the current board state, and an LLM-based sports commentator that generated live commentary, converted it to
                             speech, and played it during the match. Under hackathon time pressure, we iteratively added components
                             (VLA behavior, game logic, commentary) and prioritized robustness over overly complex end-to-end AI.
                           </p>
@@ -245,7 +238,7 @@
                           <p style="text-align: justify;">
                             I worked on fusing visual information and onboard odometry using an Extended
                             Kalman Filter (EKF) for robust state estimation, and on local obstacle
-                            avoidance using the robot’s infrared proximity sensors. The result is a
+                            avoidance using the robot's infrared proximity sensors. The result is a
                             small-scale mobile robot that follows planned paths while reacting to nearby
                             obstacles in real time.
                           </p>
@@ -278,3 +271,4 @@
     </table>
   </body>
 </html>
+
