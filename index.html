@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <table class="page-container" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -25,7 +25,7 @@
                 <p style="text-align: center;"> jiwon.you at epfl dot ch</p>
                 <p style="text-align: justify;">I am a master's student in Mechanical Engineering and Data Science at EPFL and a robotics intern at <a href="https://sipbb.ch/">Switzerland Innovation Park Biel/Bienne</a>, where I work on industrial robot manipulation for battery disassembly.</p>
                 <p style="text-align: justify;">My focus is learning-based manipulation, especially sim-to-real transfer, contact-rich skills, and building robot learning systems that remain robust on real hardware.</p>
-                <p style="text-align: justify;">I previously worked on manipulation and robot learning at EPFL, including with Prof. Josie Hughes at the <a href="https://www.epfl.ch/labs/create/">CREATE Lab</a>, studied robotics during an exchange at ETH Zurich, and received my B.S. in Mechanical Engineering from <a href="https://www.snu.ac.kr/">Seoul National University</a>, where I also worked on robotics research.</p>
+                <p style="text-align: justify;">I previously worked on manipulation and robot learning at EPFL, including with Prof. Josie Hughes at the <a href="https://www.epfl.ch/labs/create/">CREATE Lab</a>. I also did an exchange at ETH Zurich, and received my B.S. in Mechanical Engineering from <a href="https://www.snu.ac.kr/">Seoul National University</a> with Summa Cum Laude.</p>
                 <p style="text-align:center">
                   <a href="data/jiwon_you_cv.pdf">CV</a> &nbsp;/&nbsp;
                   <a href="https://www.linkedin.com/in/jiwon-you-110a33260/">LinkedIn</a> &nbsp;/&nbsp;
@@ -64,24 +64,22 @@
                     <tbody>
                       <tr>
                         <!-- Media -->
-                        <td style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
+                        <td class="project-media" style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
                           <div style="display:block;">
+                            <img src="images/sim2real_full_view.gif"
+                                alt="Full-view sim-to-real manipulation demo"
+                                style="width:100%;border-radius:8px;margin-bottom:8px;">
                             <img src="images/triple_008.gif"
                                 alt="Real robot cube pickup from top, side, and wrist views"
-                                style="width:100%;border-radius:8px;margin-bottom:8px;">
-                            <video src="videos/training_end_slow.mp4"
-                                  autoplay loop muted playsinline controls
                                   style="width:100%;border-radius:8px;">
-                              Your browser does not support the video tag.
-                            </video>
                           </div>
                         </td>
 
                         <!-- Text -->
-                        <td style="padding:10px;width:60%;vertical-align:middle">
+                        <td class="project-text" style="padding:10px;width:60%;vertical-align:middle">
                           <h3>Sim-to-Real Manipulation with UR3 + UMI</h3>
-                          <p style="text-align: justify;">I built an end-to-end sim-to-real manipulation pipeline for a UR3 arm with a compliant UMI gripper in IsaacLab, covering simulation design, policy training, demonstration collection, distillation, and deployment on the real robot.</p>
-                          <p style="text-align: justify;">The project trains reinforcement learning policies in simulation and distills them into a vision-based student policy using behavior cloning with visual randomization. On the hardware side, I developed the Python deployment stack for multithreaded robot control, Dynamixel communication, and camera streaming, enabling zero-shot transfer for object pickup from random targets without explicit state estimation.</p>
+                          <p style="text-align: justify;">I built an end-to-end sim-to-real manipulation pipeline for a UR3 arm with a UMI gripper in IsaacLab, covering simulation design, policy training, demonstration collection, vision distillation, and deployment on the real robot.</p>
+                          <p style="text-align: justify;">The project trains reinforcement learning policies in simulation, distills them into a vision-based student policy with behavior cloning under visual randomization. On the hardware side, I developed the Python deployment stack for multithreaded robot control, Dynamixel communication, and camera streaming. The final visuomotor policy achieved zero-shot transfer of picking up randomly placed objects without explicit state estimation.</p>
                           <p style="text-align: justify;">This work led to a first-author paper, <em>Sim-to-Real Transfer for Manipulation with Zero-Shot Embodiment Augmentation via Mechanical Compliance</em>, currently under review for IROS 2026.</p>
                         </td>
                       </tr>
@@ -96,17 +94,20 @@
                   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
                     <tbody>
                       <tr>
-                        <td style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
+                        <td class="project-media" style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
+                          <div class="sipbb-media-pair">
                           <video src="videos/distance_reward_only.mp4"
-                                autoplay loop muted playsinline controls
-                                style="width:100%;border-radius:8px;">
+                                  autoplay loop muted playsinline controls>
                             Your browser does not support the video tag.
                           </video>
+                            <img src="images/unscrew_real.gif"
+                                alt="Real robot unscrewing demo">
+                          </div>
                         </td>
 
-                        <td style="padding:10px;width:60%;vertical-align:middle">
+                        <td class="project-text" style="padding:10px;width:60%;vertical-align:middle">
                           <h3>Industrial Sim-to-Real Manipulation at <a href="https://sipbb.ch/">SIPBB</a></h3>
-                          <p style="text-align: justify;">At Switzerland Innovation Park Biel/Bienne, I work on industrial manipulation for automated battery disassembly, with a focus on contact-rich skills such as screw engagement and insertion-like behaviors.</p>
+                          <p style="text-align: justify;">At Switzerland Innovation Park Biel/Bienne, I work on industrial manipulation for battery disassembly, with a focus on contact-rich skills such as screw engagement and insertion-like behaviors.</p>
                           <p style="text-align: justify;">A major part of this work is making training pipelines more robust and easier to reason about. I refine observations, rewards, and curricula for high-precision manipulation tasks, and contribute to software modularization and simulation optimization so that the overall pipeline is both faster and more transparent.</p>
                         </td>
                       </tr>
@@ -122,14 +123,14 @@
                     <tbody>
                       <tr>
                         <!-- Media: three videos stacked vertically -->
-                        <td style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
+                        <td class="project-media" style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
                           <div style="display:block;">
-                            <video src="videos/pickup-demo.mp4"
+                            <video src="videos/grasping-bowl-video.mp4"
                                   autoplay loop muted playsinline controls
                                   style="width:100%;border-radius:8px;margin-bottom:8px;">
                               Your browser does not support the video tag.
                             </video>
-                            <video src="videos/grasping-bowl-video.mp4"
+                            <video src="videos/pickup-demo.mp4"
                                   autoplay loop muted playsinline controls
                                   style="width:100%;border-radius:8px;margin-bottom:8px;">
                               Your browser does not support the video tag.
@@ -142,27 +143,26 @@
                           </div>
 
                           <!-- <p style="font-size:small;margin-top:8px;">
-                            Pickup demo &nbsp;/&nbsp; Grasping bowl &nbsp;/&nbsp; Vision detection
+                            Grasping bowl &nbsp;/&nbsp; Pickup demo &nbsp;/&nbsp; Vision detection
                             <br>
-                            <a href="videos/pickup-demo.mp4" target="_blank" rel="noopener noreferrer">open pickup</a> &nbsp;쨌&nbsp;
                             <a href="videos/grasping-bowl-video.mp4" target="_blank" rel="noopener noreferrer">open bowl</a> &nbsp;쨌&nbsp;
+                            <a href="videos/pickup-demo.mp4" target="_blank" rel="noopener noreferrer">open pickup</a> &nbsp;쨌&nbsp;
                             <a href="videos/vision-detection.mp4" target="_blank" rel="noopener noreferrer">open vision</a>
                           </p> -->
                         </td>
 
 
                         <!-- Text -->
-                        <td style="padding:10px;width:60%;vertical-align:middle">
+                        <td class="project-text" style="padding:10px;width:60%;vertical-align:middle">
                           <h3>EPFL RoboCup Service Robot</h3>
                           <p style="text-align: justify;">
                             Mobile manipulator platform with a three-omniwheel base, xArm, custom Dynamixel-driven gripper,
                             and a ZED wrist camera. Our goal was reliable pick-and-place for everyday objects.
                           </p>
                           <p style="text-align: justify;">
-                            I implemented Python APIs on top of the xArm and Dynamixel SDKs, integrated a vision pipeline
-                            for object detection and orientation estimation, and converted camera-frame detections into
-                            robot-frame grasp poses. I designed and tuned grasp strategies (approach from above, height offsets,
-                            object-specific heuristics) and helped migrate from a legacy ROS2 stack to a modular, multi-threaded
+                            I implemented Python APIs on top of the xArm and Dynamixel SDKs, maintained Python/ROS2 stack, and integrated a vision pipeline
+                            for object detection and pose estimation. The robot uses classical motion planning to execute pick up. I designed and tuned grasp heuristics (approach direction, offset,
+                            object-type-specific heuristics) and helped migrate from a legacy ROS2 stack to a modular, multi-threaded
                             Python system using Docker, Git, and Linux.
                           </p>
                         </td>
@@ -180,29 +180,21 @@
                     <tbody>
                       <tr>
                         <!-- Media (placeholder ??update src when you have the files) -->
-                        <td style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
-                          <video src="videos/zurich_hackathon_clip.mp4"
-                                autoplay loop muted playsinline controls
+                        <td class="project-media" style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
+                          <img src="images/tictactoe_clipped.gif"
+                              alt="Autonomous tic-tac-toe robot demo"
                                 style="width:100%;border-radius:8px;">
-                          </video>
-                          <p style="font-size:small;">
-                            Hackathon demo video
-                          </p>
                         </td>
 
                         <!-- Text -->
-                        <td style="padding:10px;width:60%;vertical-align:middle">
+                        <td class="project-text" style="padding:10px;width:60%;vertical-align:middle">
                           <h3>Zurich Robotics Hackathon &mdash; Autonomous Tic-Tac-Toe Robot</h3>
                           <p style="text-align: justify;">
-                            At the <a href="https://inf.ethz.ch/news-and-events/spotlights/infk-news-channel/2025/06/robotics-hackathon.html" target="_blank" rel="noopener noreferrer">Zurich Robotics Hackathon 2025</a>, our team built an autonomous tic-tac-toe robot arm player
-                            on top of a LeRobot teleoperation and VLA stack. We trained nine cell-specific VLA policies
-                            (one per board cell) from teleoperation demonstrations for reliable token placement.
+                            At the <a href="https://inf.ethz.ch/news-and-events/spotlights/infk-news-channel/2025/06/robotics-hackathon.html" target="_blank" rel="noopener noreferrer">Zurich Robotics Hackathon 2025</a>, our team built an autonomous tic-tac-toe robot that can play against human in real time.
+                            The robot detects gameboard state, queries LLM for the next move, and executes it with an SO-101 arm using LeRobot VLA stack. Another LLM thread generates live TTS commentary in parallel, for an interactive crowd experience.
                           </p>
                           <p style="text-align: justify;">
-                            I was primarily responsible for the LLM components: an LLM-based gameplay module that chose moves based
-                            on the current board state, and an LLM-based sports commentator that generated live commentary, converted it to
-                            speech, and played it during the match. Under hackathon time pressure, we iteratively added components
-                            (VLA behavior, game logic, commentary) and prioritized robustness over overly complex end-to-end AI.
+                            My main contributions were all the LLM components and general orchestration of the system(multithreading, async calls, communication between vision / LLM / VLA components, etc).
                           </p>
                         </td>
                       </tr>
@@ -217,7 +209,7 @@
                     <tbody>
                       <tr>
                         <!-- Media -->
-                        <td style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
+                        <td class="project-media" style="padding:10px;width:40%;vertical-align:middle;text-align:center;">
                           <!-- Note: MP4 is usually safer than MKV for browsers.
                               If possible, convert to .mp4 and update the src. -->
                           <video src="videos/mobile-robot-demo.mkv"
@@ -228,7 +220,7 @@
                         </td>
 
                         <!-- Text -->
-                        <td style="padding:10px;width:60%;vertical-align:middle">
+                        <td class="project-text" style="padding:10px;width:60%;vertical-align:middle">
                           <h3>Mobile Robot Navigation with Thymio</h3>
                           <p style="text-align: justify;">
                             Implementation of a full navigation stack on a Thymio mobile robot. A

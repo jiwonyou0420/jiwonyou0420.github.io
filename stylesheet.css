@@ -133,3 +133,45 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+
+.page-container {
+  max-width: 1000px;
+}
+
+.sipbb-media-pair {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.sipbb-media-pair video,
+.sipbb-media-pair img {
+  height: 180px;
+  max-width: 100%;
+  width: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.sipbb-media-pair video {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.sipbb-media-pair img {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 700px) {
+  .project-media,
+  .project-text {
+    display: block;
+    width: auto !important;
+  }
+
+  .sipbb-media-pair video,
+  .sipbb-media-pair img {
+    height: 160px;
+  }
+}
