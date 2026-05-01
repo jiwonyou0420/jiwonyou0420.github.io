@@ -213,6 +213,8 @@
                           <!-- Note: MP4 is usually safer than MKV for browsers.
                               If possible, convert to .mp4 and update the src. -->
                           <video src="videos/mobile-robot-demo.mkv"
+                                class="speed-controlled-video"
+                                data-playback-rate="5"
                                 autoplay loop muted playsinline controls
                                 style="width:100%;border-radius:8px;">
                             Your browser does not support the video tag.
@@ -261,6 +263,18 @@
         </td>
       </tr>
     </table>
+    <script>
+      document.querySelectorAll('.speed-controlled-video').forEach((video) => {
+        const playbackRate = Number(video.dataset.playbackRate) || 1;
+        const setPlaybackRate = () => {
+          video.defaultPlaybackRate = playbackRate;
+          video.playbackRate = playbackRate;
+        };
+
+        setPlaybackRate();
+        video.addEventListener('loadedmetadata', setPlaybackRate);
+      });
+    </script>
   </body>
 </html>
 
