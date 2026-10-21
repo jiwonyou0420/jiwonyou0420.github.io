@@ -7,7 +7,7 @@
 
     <meta name="author" content="Jiwon You">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/jiwon_profile.jpg">
+    <link rel="shortcut icon" href="images/Jiwon_You_photo_recent.jpg">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
   </head>
@@ -23,17 +23,17 @@
                   Jiwon You
                 </p>
                 <p style="text-align: center;"> jiwon.you at epfl dot ch</p>
-                <p style="text-align: justify;">I am a master's student in Mechanical Engineering and Data Science at EPFL and a robotics intern at <a href="https://sipbb.ch/">Switzerland Innovation Park Biel/Bienne</a>, where I work on industrial robot manipulation for battery disassembly.</p>
+                <p style="text-align: justify;">I am a master's student in Mechanical Engineering and Data Science at EPFL. Currently I'm doing master's thesis on perceptive humanoid locomanipulation at <a href="https://rsl.ethz.ch/">Robotic Systems Lab (RSL)</a>, ETH Zurich.</p>
                 <p style="text-align: justify;">My focus is learning-based manipulation, especially sim-to-real transfer, contact-rich skills, and building robot learning systems that remain robust on real hardware.</p>
-                <p style="text-align: justify;">I previously worked on manipulation and robot learning at EPFL, including with Prof. Josie Hughes at the <a href="https://www.epfl.ch/labs/create/">CREATE Lab</a>. I also did an exchange at ETH Zurich, and received my B.S. in Mechanical Engineering from <a href="https://www.snu.ac.kr/">Seoul National University</a> with Summa Cum Laude.</p>
+                <p style="text-align: justify;">Previously, I worked on industrial robot manipulation at <a href="https://sipbb.ch/">Switzerland Innovation Park Biel/Bienne</a> and on robot learning at EPFL, including with Prof. Josie Hughes at the <a href="https://www.epfl.ch/labs/create/">CREATE Lab</a>. I received my B.S. in Mechanical Engineering from <a href="https://www.snu.ac.kr/">Seoul National University</a>, summa cum laude.</p>
                 <p style="text-align:center">
-                  <a href="data/jiwon_you_cv.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="data/jiwon_you_cv_1021.pdf">CV (April 2026)</a> &nbsp;/&nbsp;
                   <a href="https://www.linkedin.com/in/jiwon-you-110a33260/">LinkedIn</a> &nbsp;/&nbsp;
                   <a href="https://github.com/jiwonyou0420/">Github</a>
                 </p>
               </td>
               <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/jiwon_profile.jpg"><img style="width:100%;max-width:100%;object-fit: cover; " alt="profile photo" src="images/jiwon_profile.jpg" class="hoverZoomLink"></a>
+                <a href="images/Jiwon_You_photo_recent.jpg"><img style="width:100%;max-width:100%;object-fit: cover; " alt="profile photo" src="images/jiwon_profile.jpg" class="hoverZoomLink"></a>
               </td>
             </tr>
           </tbody></table>
@@ -42,9 +42,7 @@
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
                 <p style="text-align: justify;">
-                  My work sits between robot learning and robot systems. I have built end-to-end manipulation pipelines spanning simulation design, reinforcement learning, demonstration collection, policy distillation, deployment software, and real-robot evaluation.</p>
-                <p style="text-align: justify;">
-                  Recently, I have focused on sim-to-real manipulation in IsaacLab, vision-based policy learning, and contact-rich industrial skills such as screw engagement and battery disassembly. I am especially interested in methods that improve robustness without unnecessary complexity: better task design, clearer learning pipelines, and stronger transfer from simulation to hardware.</p>
+                  My work sits between robot learning and robot systems. I have built manipulation pipelines spanning simulation design, reinforcement learning, policy distillation, deployment software, and real-robot evaluation.</p>
               </td>
             </tr>
           </tbody></table>
@@ -54,6 +52,14 @@
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
                   <h2>Projects</h2>
+                </td>
+              </tr>
+
+              <!-- Current master's thesis -->
+              <tr>
+                <td class="current-work" style="padding:20px;vertical-align:middle">
+                  <p class="project-status">Master's thesis at the <a href="https://rsl.ethz.ch/">Robotic Systems Lab</a>, ETH Zurich</p>
+                  <p>I am developing a perceptive humanoid locomanipulation system with modular architecture composed of high level planner and low level tracker.</p>
                 </td>
               </tr>
 
@@ -78,9 +84,9 @@
                         <!-- Text -->
                         <td class="project-text" style="padding:10px;width:60%;vertical-align:middle">
                           <h3>Sim-to-Real Manipulation with UR3 + UMI</h3>
-                          <p style="text-align: justify;">I built an end-to-end sim-to-real manipulation pipeline for a UR3 arm with a UMI gripper in IsaacLab, covering simulation design, policy training, demonstration collection, vision distillation, and deployment on the real robot.</p>
-                          <p style="text-align: justify;">The project trains reinforcement learning policies in simulation, distills them into a vision-based student policy with behavior cloning under visual randomization. On the hardware side, I developed the Python deployment stack for multithreaded robot control, Dynamixel communication, and camera streaming. The final visuomotor policy achieved zero-shot transfer of picking up randomly placed objects without explicit state estimation.</p>
-                          <p style="text-align: justify;">This work led to a first-author paper, <em>Sim-to-Real Transfer for Manipulation with Zero-Shot Embodiment Augmentation via Mechanical Compliance</em>, currently under review for IROS 2026.</p>
+                          <p style="text-align: justify;">I built an end-to-end sim-to-real manipulation pipeline for a UR3 arm with a UMI gripper in IsaacLab, covering simulation design, MDP design, policy training, vision distillation, and deployment on the real robot.</p>
+                          <p style="text-align: justify;">The project trains reinforcement learning policies in simulation, distills them into a vision-based student policy with behavior cloning under visual randomization. On the hardware side, I developed Python deployment stack for multithreaded robot control, Dynamixel communication, and camera streaming. The final visuomotor policy achieved zero-shot transfer of picking up randomly placed objects without explicit state estimation.</p>
+                          <p style="text-align: justify;">This work led to a first-author manuscript, <em>Sim-to-Real Transfer for Manipulation with Zero-Shot Embodiment Augmentation via Mechanical Compliance</em>, at Frontiers in Robotics and AI.</p>
                         </td>
                       </tr>
                     </tbody>
@@ -103,12 +109,13 @@
                             <img src="images/unscrew_real.gif"
                                 alt="Real robot unscrewing demo">
                           </div>
+                          <img class="sipbb-lift" src="images/kinova_lift.gif"
+                               alt="Kinova arm lifting an object in a vision-guided demo" loading="lazy">
                         </td>
 
                         <td class="project-text" style="padding:10px;width:60%;vertical-align:middle">
                           <h3>Industrial Sim-to-Real Manipulation at <a href="https://sipbb.ch/">SIPBB</a></h3>
-                          <p style="text-align: justify;">At Switzerland Innovation Park Biel/Bienne, I work on industrial manipulation for battery disassembly, with a focus on contact-rich skills such as screw engagement and insertion-like behaviors.</p>
-                          <p style="text-align: justify;">A major part of this work is making training pipelines more robust and easier to reason about. I refine observations, rewards, and curricula for high-precision manipulation tasks, and contribute to software modularization and simulation optimization so that the overall pipeline is both faster and more transparent.</p>
+                          <p>As a robotics intern (February–August 2026), I developed learning-based skills for EV battery disassembly, including screw engagement and variable-stiffness impedance control to improve tracking under joint stiction. I integrated FastFoundationStereo and SAHI for screw pose estimation and delivered a vision-guided lifting demo on a Kinova arm.</p>
                         </td>
                       </tr>
                     </tbody>

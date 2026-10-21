@@ -138,6 +138,28 @@ span.highlight {
   max-width: 1000px;
 }
 
+.current-work {
+  background: #f5f8fc;
+  border-left: 3px solid #1772d0;
+}
+
+.current-work h3 {
+  margin-top: 6px;
+}
+
+.current-work p:last-child {
+  margin-bottom: 0;
+}
+
+.project-status {
+  color: #4c6078;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
 .sipbb-media-pair {
   display: flex;
   align-items: center;
@@ -161,6 +183,14 @@ span.highlight {
 
 .sipbb-media-pair img {
   flex: 0 0 auto;
+}
+
+.sipbb-lift {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 8px;
+  border-radius: 8px;
 }
 
 @media (max-width: 700px) {
